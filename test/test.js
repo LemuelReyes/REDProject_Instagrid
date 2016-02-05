@@ -1,0 +1,1 @@
+$(function(){$("#button").on("click",function(a){a.preventDefault();var n=$("#hashtag").val();$.ajax({method:"GET",url:"https://api.instagram.com/v1/tags/"+n+"/media/recent?access_token=347099814.ea93cc6.090dcae0f75f4781a04135c47713db52"}).done(function(a){console.log(a)}).fail(function(){console.log(arguments)})})});
