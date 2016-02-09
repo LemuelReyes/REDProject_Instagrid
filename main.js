@@ -21,8 +21,12 @@ $results = $('.grid');
     $('button').on('click', function(){
       event.preventDefault();
       $results.hide();
+
+// takes header and shoves it to the top
+
+    $(".main-hub").css("height", "auto");
 // hashtag is in the searchbar html id#
-//search wrapper add css heiht auto
+
       var hashtag = $('#hashtag').val();
 
     $.ajax({
@@ -31,25 +35,41 @@ $results = $('.grid');
             url: "https://api.instagram.com/v1/tags/"+hashtag+"/media/recent?count=12&client_id=71e21c4bf4294a8498860283067eb682"
           })
      .done(function(response) {
-            //console.log(pictureData);
+            //console.log(response);
 
     $.each(response.data, function( index, value ) {
+      //pictures
+
+      /* li
+      div
+      div
+      div
+
+      div
+      div
+      div
+      li */
+
       instagridPics+='<li>';
       instagridPics+='<a href=" '+ value.link+'"><img src="'+value.images.standard_resolution.url+'" /></a>';
       instagridPics+='</li>';
+      //
+      instagridPics+='<li>';
+      instagridPics+='<p>'+value.caption.from.username+'</p>';
+      instagridPics+='</li>';
 
-      //instagridPics='';
+      instagridPics+='<li>';
+      instagridPics+='<a href=" '+ value.link + '"><img src"'+value.comments.count+'" /></a>';
+      instagridPics+='</li>';
 
+      instagridPics+='<li>';
+      instagridPics+='<p>'+value.likes.count+'</p>';
+      instagridPics+='</li>';
                 });
+
       $results.empty().append(instagridPics).slideDown();
+      instagridPics= '';
+
           }); //ends done function
       });
 });
-
-
-/*             .done(function(instaData) {
-               console.log(instaData);
-              })
-              .fail(function(){
-                console.log(arguments);
-            }); */

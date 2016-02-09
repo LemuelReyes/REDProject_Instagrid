@@ -93,9 +93,13 @@ input[type] {
 /* grid */
 
 .grid {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .grid li {
+  /* height: auto; */
+  /*width: 250px; */
 }
 
 /* copyright */
