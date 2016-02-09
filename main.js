@@ -22,21 +22,26 @@ $results = $('.grid');
       event.preventDefault();
       $results.hide();
 // hashtag is in the searchbar html id#
-
+//search wrapper add css heiht auto
       var hashtag = $('#hashtag').val();
 
     $.ajax({
             dataType: "jsonp",
             method: 'GET',
-            url: 'https://api.instagram.com/v1/tags/'+ hashtag +'/media/recent?count=12&client_id=71e21c4bf4294a8498860283067eb682'
+            url: "https://api.instagram.com/v1/tags/"+hashtag+"/media/recent?count=12&client_id=71e21c4bf4294a8498860283067eb682"
           })
-     .done(function(pictureData) {
+     .done(function(response) {
             //console.log(pictureData);
 
-      //instagridPics += '<li>' + pictureData.data + '</li>';
+    $.each(response.data, function( index, value ) {
+      instagridPics+='<li>';
+      instagridPics+='<a href=" '+ value.link+'"><img src="'+value.images.standard_resolution.url+'" /></a>';
+      instagridPics+='</li>';
 
-      //$results.append(instagridPics);
+      //instagridPics='';
 
+                });
+      $results.empty().append(instagridPics).slideDown();
           }); //ends done function
       });
 });

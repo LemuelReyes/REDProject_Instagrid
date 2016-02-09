@@ -16,7 +16,7 @@ img, video {
 }
 
 .container {
-  padding: 0 2rem;
+  padding: 0 0rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -89,6 +89,14 @@ input[type] {
   top: 1rem;
   color: white;
   }
+
+/* grid */
+
+.grid {
+}
+
+.grid li {
+}
 
 /* copyright */
 .footer {
