@@ -12,24 +12,34 @@
     https://api.instagram.com/oauth/access_token */
 
 
-    $(function() {
-    $('button').on('click', function(event){
+$(function() {
 
-        event.preventDefault();
+var instagridPics = '',
+$results = $('.grid');
 
-        var hashtag = $('#hashtag').val();
+//on click run this
+    $('button').on('click', function(){
+      event.preventDefault();
+      $results.hide();
+// hashtag is in the searchbar html id#
 
-        $.ajax({
+      var hashtag = $('#hashtag').val();
+
+    $.ajax({
             dataType: "jsonp",
             method: 'GET',
             url: 'https://api.instagram.com/v1/tags/'+ hashtag +'/media/recent?count=12&client_id=71e21c4bf4294a8498860283067eb682'
-          }).done(function(pictureData) {
-            console.log(pictureData);
-            $('.grid').append();
-          }); //ends done function
+          })
+     .done(function(pictureData) {
+            //console.log(pictureData);
 
-          });
-        });
+      //instagridPics += '<li>' + pictureData.data + '</li>';
+
+      //$results.append(instagridPics);
+
+          }); //ends done function
+      });
+});
 
 
 /*             .done(function(instaData) {
