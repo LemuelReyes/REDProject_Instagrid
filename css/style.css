@@ -6,8 +6,7 @@ html {
 body {
   font-family: "OpenSans";
   background-color: black;
-  height: 100vh;
-  width: 100vw;
+
 }
 
 img, video {
@@ -105,15 +104,34 @@ input[type] {
   flex-wrap: wrap;
 }
 
-.grid li {
-  /* height: auto; */
-  /*width: 250px; */
+.username-container {
+  display: flex;
+  position: absolute;
+}
+
+.profile-container {
+  height: auto;
+  overflow: hidden;
+  width: 33%;
+}
+
+}
+
+.social-media-container {
+  font-weight: 700;
+  text-align: right;
+  width: 67%;
+}
+
+.fa-heart {
+  color: white;
 }
 
 /* copyright */
 .footer {
   display: flex;
   justify-content: center;
+  height: 10vh;
 }
 
 .footer p{
@@ -265,6 +283,7 @@ input[type] {
   .footer {
     display: flex;
     justify-content: flex-start;
+    padding-left: 2rem;
   }
 
 }
