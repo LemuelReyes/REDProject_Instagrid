@@ -104,6 +104,14 @@ input[type] {
   flex-wrap: wrap;
 }
 
+
+.list-container {
+}
+
+/* username, profile, and social media container values attributes copied from original site to emulate the effect but due to time
+constraints was not able to play around with my own attributes. Originally intended to use flexbox to manipulate the contents but was not able
+to. */
+
 .username-container {
   display: flex;
   position: absolute;
@@ -115,10 +123,8 @@ input[type] {
   width: 33%;
 }
 
-}
 
 .social-media-container {
-  font-weight: 700;
   text-align: right;
   width: 67%;
 }
