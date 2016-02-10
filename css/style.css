@@ -30,6 +30,8 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
+padding-top: 1.7rem;
+padding-bottom: 1.7rem;
 }
 
 
@@ -53,6 +55,12 @@ button .fa-search {
   position: absolute;
   left: 15rem;
   top: 1.3rem;
+}
+
+.fa-search:hover {
+  color: red;
+  cursor: pointer;
+  cursor: hand;
 }
 
 .hashtag-symbol {
@@ -202,6 +210,9 @@ input[type] {
       left: 1.5rem;
   }
 
+  .grid li {
+    flex-basis: 33.333%;
+  }
 
 }
 
@@ -214,12 +225,13 @@ input[type] {
 @media all and (min-width: 1000px) {
 
   .instagrid-logo {
-    width: 15rem;
+    width: 19rem;
 }
 
   .main-hub {
   flex-direction: row;
   justify-content: flex-start;
+  padding-left: 2rem;
   }
 
   .search-bar {
@@ -239,6 +251,10 @@ input[type] {
       font-size: 1.3rem;
       top: 0rem;
       left: 1.5rem;
+  }
+
+  .grid li {
+    flex-basis: 25%;
   }
 
   button .fa-search {

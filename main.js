@@ -38,34 +38,26 @@ $results = $('.grid');
             //console.log(response);
 
     $.each(response.data, function( index, value ) {
-      //pictures
 
-      /* li
-      div
-      div
-      div
 
-      div
-      div
-      div
-      li */
-
-      instagridPics+='<li>';
-      instagridPics+='<a href=" '+ value.link+'"><img src="'+value.images.standard_resolution.url+'" /></a>';
-      instagridPics+='</li>';
-      //
-      instagridPics+='<li>';
+      instagridPics+='<li>'; //this li wraps everything under it
+      instagridPics+='<div class="list-container">';
+      instagridPics+='<a href=" '+ value.link+'"><img src="'+value.images.standard_resolution.url+'" /></a>'; //pictures
+      instagridPics+='<div class="username-container">';
+      instagridPics+='<div class="profile-container">';
+      //insert profile pic
+      instagridPics+='</div>'; //ends profile container
+      instagridPics+='<div class="social-media-container">';
       instagridPics+='<p>'+value.caption.from.username+'</p>';
-      instagridPics+='</li>';
 
-      instagridPics+='<li>';
-      instagridPics+='<a href=" '+ value.link + '"><img src"'+value.comments.count+'" /></a>';
-      instagridPics+='</li>';
-
-      instagridPics+='<li>';
+      instagridPics+='<p>'+value.comments.count+'</p>';
       instagridPics+='<p>'+value.likes.count+'</p>';
-      instagridPics+='</li>';
-                });
+
+      instagridPics+='</div>'; //ends social-media container
+      instagridPics+='</div>'; //ends username container
+      instagridPics+='</div>'; //ends div class list-container
+      instagridPics+='</li>'; //this li ends the first li
+      });
 
       $results.empty().append(instagridPics).slideDown();
       instagridPics= '';
