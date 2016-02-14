@@ -109,6 +109,9 @@ input[type] {
 
 
 .list-container {
+   display: flex;
+   flex-direction: column;
+   position: relative;
 }
 
 /* username, profile, and social media container values attributes copied from original site to emulate the effect but due to time
@@ -118,6 +121,10 @@ to. */
 .username-container {
   display: flex;
   position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom:0;
+  z-index: 100;
 }
 
 .profile-container {
