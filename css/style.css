@@ -13,7 +13,10 @@ img, video {
    max-width: 100%; /* adhere to container width */
    height: auto; /* make sure height scales correctly */
 }
-
+* {
+   box-sizing: border-box;
+   outline:none;
+}
 .container {
   padding: 0 0rem;
   width: 100%;
