@@ -126,14 +126,16 @@ to. */
   bottom:0;
   z-index: 100;
 }
-
-.profile-container {
-  height: auto;
-  overflow: hidden;
-  width: 33%;
+.profpic-cont {
+   width: 33%;
 }
-
-
+.profile-container {
+  height: 50px;
+  width: 50px;
+  margin: .5rem 1rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
 .social-media-container {
   text-align: right;
   width: 67%;

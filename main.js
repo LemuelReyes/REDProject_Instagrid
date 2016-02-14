@@ -44,9 +44,9 @@ $results = $('.grid');
       instagridPics+='<div class="list-container">';
       instagridPics+='<a href=" '+ value.link+'"><img src="'+value.images.standard_resolution.url+'" /></a>'; // grid pictures
       instagridPics+='<div class="username-container">'; //container of the profile and social media
-      instagridPics+='<div class="profile-container">'; //controls the profile pic
+      instagridPics+='<span class="profpic-cont"><div class="profile-container">'; //controls the profile pic
       instagridPics+='<a href=" '+ value.link+'"><img src="'+value.caption.from.profile_picture+'" /></a>'; //profile pic thumbnail
-      instagridPics+='</div>'; //ends profile container
+      instagridPics+='</div></span>'; //ends profile container
       instagridPics+='<div class="social-media-container">'; //controls comments, like, comment, and icons section
       instagridPics+='<p>'+value.caption.from.username+'</p>';
       instagridPics+='<p><i class="fa fa-comments">'+value.comments.count+'</i></p>';
