@@ -141,6 +141,19 @@ to. */
   width: 67%;
 }
 
+.username-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+.likes-inline, .comments-inline {
+  display: inline-block;
+  font-size: 13px;
+}
+
+.comments-inline {
+  padding-left: 5px;
+}
+
 .fa-heart {
   color: white;
 }
