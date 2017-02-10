@@ -6,7 +6,7 @@ var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
-var minifyCSS = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 
 
@@ -45,7 +45,7 @@ gulp.task('sass-process', function(){
    .pipe(autoprefixer({
       browsers: ['last 2 versions']}))
    .pipe(gulp.dest('./build'))
-   .pipe(minifyCSS())
+   .pipe(cleanCSS())
    .pipe(rename('style.min.css'))
    .pipe(gulp.dest('./build'));
 });

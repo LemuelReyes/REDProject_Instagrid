@@ -2,7 +2,7 @@
   "name": "instagrid",
   "version": "1.0.0",
   "description": "Instagrid Project for RED Academy",
-  "author": "Cameron Fuller",
+  "author": "Lemuel Reyes",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.1",
