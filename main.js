@@ -32,7 +32,7 @@ $results = $('.grid');
     $.ajax({
             dataType: "jsonp",
             method: 'GET',
-            url: "https://api.instagram.com/v1/tags/"+hashtag+"/media/recent?count=12&client_id=71e21c4bf4294a8498860283067eb682"
+            url: "https://api.instagram.com/v1/tags/"+hashtag+"/media/recent?count=12&client_id=78d962b5eff44a3586c05025e1070616"
           })
      .done(function(response) {
             //console.log(response);
